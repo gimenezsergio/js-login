@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+        <ul class="tab-group">
+            <li class="tab active" onclick="selectedSignup()" id="signupTab"><a href="#signup">Sign Up</a></li>
+            <li class="tab" onclick="selectedLogin()" id="loginTab"><a href="#login">Log In</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="signup">
+                <h1>Sign Up for Free</h1>
+                <form>
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <input type="text" required autocomplete="off" placeholder="First Name *" id="first_name_signup"/>
+                        </div>
+
+                        <div class="field-wrap">
+                            <input type="text" required autocomplete="off" placeholder="Last Name" id="last_name_signup"/>
+                        </div>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="email" required autocomplete="off" placeholder="Email" id="email_signup"/>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="password" required autocomplete="off" placeholder="Password" id="password_signup"/>
+                    </div>
+                    <input type="button" value="button" class="button button-block" onclick="signup()">
+                </form>
+            </div>
+            <div id="login">
+                <h1>Welcome Back!</h1>
+                <form>
+                    <div class="field-wrap">
+                        <input type="email" required autocomplete="off" placeholder="Email" id="email_login"/>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="password" required autocomplete="off" placeholder="Password" id="password_login"/>
+                    </div>
+                    <p class="forgot">Forgot Password?</p>
+                    <input type="button" value="Log In" class="button button-block" onclick="login()">
+                </form>
+            </div>
+        </div><!-- tab-content -->
+    </div> <!-- /form -->
+    <script src="tabs_panel_active.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>
